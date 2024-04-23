@@ -1,0 +1,10 @@
+<div class="withdraw-container">
+    <h2>Withdraw Page</h2>
+    <form (ngSubmit)="withdraw()" #withdrawForm="ngForm" class="withdraw-form">
+      <label for="amount">Enter Amount:</label>
+      <input type="number" id="amount" name="amount" [(ngModel)]="withdrawAmount" required class="withdraw-input">
+      <button type="submit" [disabled]="!withdrawForm.form.valid || withdrawAmount <= 0" class="withdraw-button">Withdraw</button>
+    </form>
+    <p *ngIf="withdrawalMessage" class="withdraw-message">{{ withdrawalMessage }}</p>
+  </div>
+  

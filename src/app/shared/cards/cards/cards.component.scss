@@ -1,0 +1,33 @@
+.custom-card {
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set the desired width */
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-card .card-content {
+    padding: 20px;
+  }
+  
+  .custom-card .card-content .mat-card-title {
+    color: #007bff;
+  }
+  
+  .custom-card .card-content .mat-card-subtitle {
+    color: #555;
+  }
+  
+  .custom-card:nth-child(odd) {
+    background-color: #1a7adb;
+  }
+  
+  .custom-card:nth-child(even) {
+    background-color: #1b78d6;
+  }
+  

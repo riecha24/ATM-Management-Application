@@ -1,0 +1,22 @@
+<div class="atm-overview">
+    <h2>ATM Overview Page</h2>
+    
+    <div class="section">
+      <h3>Denominations</h3>
+      <ul>
+        <li *ngFor="let denomination of denominations | keyvalue">
+          ${{ denomination.key }}: {{ denomination.value }}
+        </li>
+      </ul>
+    </div>
+  
+    <div class="section">
+      <h3>Transaction History</h3>
+      <ul>
+        <li *ngFor="let transaction of transactionHistory">
+          {{ transaction }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  

@@ -1,0 +1,9 @@
+<div class="restock-container">
+    <h2>Restock Page</h2>
+    <div *ngFor="let denomination of denominations | keyvalue" class="denomination-item">
+      <label for="quantity-{{ denomination.key }}">Quantity of ${{ denomination.key }}:</label>
+      <input type="number" id="quantity-{{ denomination.key }}" [(ngModel)]="denomination.value" class="quantity-input">
+      <button (click)="restock(denomination.key, denomination.value)" class="restock-button">Restock</button>
+    </div>
+  </div>
+  
